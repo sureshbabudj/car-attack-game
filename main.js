@@ -55,22 +55,24 @@ class Player {
 
 let prevRandom
 function getRandomX() {
-  let posX, OneFourthOfRoad = canvas.width / 4
-  let posXGap = OneFourthOfRoad
+  let posX, OneFifthOfRoad = canvas.width / 5
   let random;
   let randomNo = Math.random()
-  if (randomNo <= 0.25) {
+  if (randomNo <= 0.20) {
     random = 1
-    posX = posXGap
-  } else if (randomNo >= 0.26 && randomNo <= 0.5) {
+    posX = 0
+  } else if (randomNo >= 0.21 && randomNo <= 0.4) {
     random = 2
-    posX = OneFourthOfRoad + posXGap
-  } else if (randomNo >= 0.51 && randomNo <= 0.75) {
+    posX = OneFifthOfRoad
+  } else if (randomNo >= 0.41 && randomNo <= 0.60) {
     random = 3
-    posX = (OneFourthOfRoad * 2) + posXGap
-  } else {
+    posX = OneFifthOfRoad * 2
+  } else if (randomNo >= 0.61 && randomNo <= 0.80) {
     random = 4
-    posX = (OneFourthOfRoad * 3) + posXGap
+    posX = OneFifthOfRoad * 3
+  } else {
+    random = 5
+    posX = OneFifthOfRoad * 4
   }
   if (prevRandom && prevRandom === random) {
     return getRandomX()
