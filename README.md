@@ -16,7 +16,7 @@ Run `npm run dev` in your IDE, the game should start, if not check errors with y
 The game graphics are made in Vanila JS using Canvas
 
 ### Architecture
-The game mimics Classic Bubble Burst Game :)
+The game mimics Classic Raod Rash Game :)
 
 ### Publish
 Published with VITE
